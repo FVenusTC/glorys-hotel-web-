@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glory's Hostel | Inicio</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navegación (Bootstrap Navbar + Componentes Avanzados: Badge) -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center fw-bold" href="index.html">
+                    <img src="img/corona.png" alt="Logo" class="navbar-logo">
+                    <i> </i>   GLORY'S HOTEL
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/nosotros.html">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/servicios.html">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/galeria.html">Galería</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/contacto.html">Contacto</a></li>
+                    </ul>
+                    <!-- Badge Component -->
+                    <span class="badge bg-danger ms-lg-3 mt-2 mt-lg-0 animated-pulse">¡Oferta 20% dscto!</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Inicio: Carousel -->
+        <section id="inicio" class="pt-5 mt-5">
+            <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <!-- Imagen optimizada (placeholder) -->
+                        <img src="img/habitaciondoble.jpg" class="d-block w-100 img-hero" alt="habitacion de Glorys Hotel">
+                        <div class="carousel-caption bg-dark bg-opacity-50 rounded p-3">
+    <h1 class="display-4 fw-bold">Bienvenido a Glory's Hotel</h1>
+    <p class="lead">Tu descanso y comodidad son nuestra prioridad.</p>
+                            <!-- Componente Avanzado: Tooltip -->
+                            <button class="btn btn-gold btn-lg" data-bs-toggle="tooltip" data-bs-placement="top" title="¡Reserva sin tarjeta de crédito!">Reservar Ahora</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Nosotros: Accordion y Video -->
+        <section id="nosotros" class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0 reveal-on-scroll">
+                    <article>
+                        <h2 class="text-gold mb-3">Nuestra Historia</h2>
+                        <p class="text-muted">En Glory's Hotel llevamos años ofreciendo un servicio de calidad, integrando la hospitalidad local con comodidades modernas para que te sientas como en casa.</p>
+                        
+                        <!-- Bootstrap Accordion -->
+                        <div class="accordion mt-4" id="accordionNosotros">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="btn-gold accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                        Nuestra Misión
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionNosotros">
+                                    <div class="accordion-body">
+                                        Brindar un servicio de alojamiento excepcional, superando las expectativas de nuestros huéspedes.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6">
+                    <!-- Video Incrustado -->
+                    <div class="ratio ratio-16x9 shadow rounded overflow-hidden">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/_Xms-Zf3ooY?si=3XRvmAAqgMpuqGiB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Habitaciones: Estilo Oscuro con Badges y Modal -->
+        <section id="habitaciones" class="mi-fondo-degradado py-5">
+            <div class="container py-4">
+                <div class="text-center mb-5">
+                    <h2 class="text-gold fw-bold text-uppercase tracking-wide">Nuestras Habitaciones</h2>
+                    <hr class="divider-yellow mx-auto">
+                </div>
+                
+                <div class="row g-4">
+                    <!-- Card 1: Suite Ejecutiva -->
+                    <div class="col-md-4 d-flex">
+                        <div class="card h-100 card-dark shadow card-hover w-100">
+                            <div class="p-3 pb-0">
+                                <img src="img/habitacion1.png" class="card-img-top rounded-4 img-room" alt="Suite Ejecutiva">
+                            </div>
+                            <div class="card-body d-flex flex-column text-white p-4">
+                                <h4 class="card-title fw-bold mb-3">Suite Ejecutiva</h4>
+                                <p class="card-text text-light-gray mb-4">Espacio moderno y confortable, ideal para profesionales en viaje de negocios.</p>
+                                
+                                <!-- Etiquetas de Servicios -->
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <span class="amenity-badge"><i class="bi bi-wifi text-warning"></i> WiFi</span>
+                                    <span class="amenity-badge"><i class="bi bi-tv text-warning"></i> Smart TV</span>
+                                    <span class="amenity-badge"><i class="bi bi-snow text-warning"></i> AC</span>
+                                    <span class="amenity-badge"><i class="bi bi-cup-straw text-warning"></i> Minibar</span>
+                                    <span class="amenity-badge"><i class="bi bi-car-front text-warning"></i> Cochera</span>
+                                </div>
+                                
+                                <!-- Botón que abre el Modal -->
+                                <button type="button" class="btn btn-outline-warning w-100 mt-auto" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#modalReserva"
+                                    data-room-title="Suite Ejecutiva"
+                                    data-room-desc="Esta habitación cuenta con cama Queen, baño privado con agua caliente las 24 horas, Smart TV y aire acondicionado"
+                                    data-room-price="S/ 150.00 / noche">
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Suite Nupcial -->
+                    <div class="col-md-4 d-flex">
+                        <div class="card h-100 card-dark shadow card-hover w-100">
+                            <div class="p-3 pb-0">
+                                <img src="img/habitacion2.png" class="card-img-top rounded-4 img-room" alt="Suite Nupcial">
+                            </div>
+                            <div class="card-body d-flex flex-column text-white p-4">
+                                <h4 class="card-title fw-bold mb-3">Suite Nupcial</h4>
+                                <p class="card-text text-light-gray mb-4">Espacio ideal para parejas en su luna de miel, equipada con todo lo necesario para una estancia inolvidable.</p>
+                                
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <span class="amenity-badge"><i class="bi bi-wifi text-warning"></i> WiFi</span>
+                                    <span class="amenity-badge"><i class="bi bi-tv text-warning"></i> Smart TV</span>
+                                    <span class="amenity-badge"><i class="bi bi-cup-straw text-warning"></i> Minibar</span>
+                                    <span class="amenity-badge"><i class="bi bi-water text-warning"></i> Jacuzzi</span>
+                                    <span class="amenity-badge"><i class="bi bi-car-front text-warning"></i> Cochera</span>
+                                </div>
+                                
+                                <button type="button" class="btn btn-outline-warning w-100 mt-auto" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#modalReserva"
+                                    data-room-title="Suite Nupcial"
+                                    data-room-desc="Esta habitación cuenta con cama Queen, baño privado con agua caliente las 24 horas, Smart TV y aire acondicionado"
+                                    data-room-price="S/ 120.00 / noche">
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Habitación Matrimonial -->
+                    <div class="col-md-4 d-flex">
+                        <div class="card h-100 card-dark shadow card-hover w-100">
+                            <div class="p-3 pb-0">
+                                <img src="img/habitacion3.png" class="card-img-top rounded-4 img-room" alt="Habitación Matrimonial">
+                            </div>
+                            <div class="card-body d-flex flex-column text-white p-4">
+                                <h4 class="card-title fw-bold mb-3">Habitación Matrimonial</h4>
+                                <p class="card-text text-light-gray mb-4">Espacio ideal para viajes en pareja, equipada con todo lo necesario para tu descanso.</p>
+                                
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <span class="amenity-badge"><i class="bi bi-wifi text-warning"></i> WiFi</span>
+                                    <span class="amenity-badge"><i class="bi bi-tv text-warning"></i> Smart TV</span>
+                                    <span class="amenity-badge"><i class="bi bi-cup-straw text-warning"></i> Minibar</span>
+                                    <span class="amenity-badge"><i class="bi bi-car-front text-warning"></i> Cochera</span>
+                                </div>
+                                
+                                <button type="button" class="btn btn-outline-warning w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#modalReserva" data-room-title="Habitación Matrimonial" data-room-desc="Espacio ideal para viajes en pareja, equipada con todo lo necesario para tu descanso." data-room-price="S/ 70.00 / noche">Ver Detalles</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4: Habitación Doble Confort -->
+                    <div class="col-md-4 d-flex">
+                        <div class="card h-100 card-dark shadow card-hover w-100">
+                            <!-- Nota: Coloca aquí la ruta de la imagen de la Habitación Doble Confort -->
+                            <div class="p-3 pb-0">
+                                <img src="img/Habitacion-Doble-Confort.png" class="card-img-top rounded-4 img-room" alt="Habitación Doble Confort">
+                            </div>
+                            <div class="card-body d-flex flex-column text-white p-4">
+                                <h4 class="card-title fw-bold mb-3">Habitación Doble Confort</h4>
+                                <p class="card-text text-light-gray mb-4">Diseño moderno y espacioso, ideal para viajes en pareja o amigos.</p>
+                                
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <span class="amenity-badge"><i class="bi bi-wifi text-warning"></i> WiFi</span>
+                                    <span class="amenity-badge"><i class="bi bi-tv text-warning"></i> Smart TV</span>
+                                    <span class="amenity-badge"><i class="bi bi-car-front text-warning"></i> Cochera</span>
+                                </div>
+                                
+                                <button type="button" class="btn btn-outline-warning w-100 mt-auto" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#modalReserva"
+                                    data-room-title="Habitación Doble Confort"
+                                    data-room-desc="Esta habitación cuenta con cama Queen, baño privado con agua caliente las 24 horas, Smart TV y aire acondicionado"
+                                    data-room-price="S/ 60.00 / noche">
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Habitación Familiar -->
+                    <div class="col-md-4 d-flex">
+                        <div class="card h-100 card-dark shadow card-hover w-100">
+                            <!-- Nota: Coloca aquí la ruta de la imagen de la Habitación Familiar -->
+                            <div class="p-3 pb-0">
+                                <img src="img/Habitacion-Familiar.jpg" class="card-img-top rounded-4 img-room" alt="Habitación Familiar">
+                            </div>
+                            <div class="card-body d-flex flex-column text-white p-4">
+                                <h4 class="card-title fw-bold mb-3">Habitación Familiar</h4>
+                                <p class="card-text text-light-gray mb-4">Diseño moderno y espacioso, ideal para familias.</p>
+                                
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <span class="amenity-badge"><i class="bi bi-wifi text-warning"></i> WiFi</span>
+                                    <span class="amenity-badge"><i class="bi bi-tv text-warning"></i> Smart TV</span>
+                                    <span class="amenity-badge"><i class="bi bi-car-front text-warning"></i> Cochera</span>
+                                </div>
+                                
+                                <button type="button" class="btn btn-outline-warning w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#modalReserva" data-room-title="Habitación Familiar" data-room-desc="Esta habitación cuenta con cama Queen, baño privado con agua caliente las 24 horas, Smart TV y aire acondicionado" data-room-price="S/ 90.00 / noche">Ver Detalles</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Habitación Juvenil -->
+                    <div class="col-md-4 d-flex">
+                        <div class="card h-100 card-dark shadow card-hover w-100">
+                            <div class="p-3 pb-0">
+                                <img src="img/Habitacion-Juvenil.jpg" class="card-img-top rounded-4 img-room" alt="Habitación Juvenil">
+                            </div>
+                            <div class="card-body d-flex flex-column text-white p-4">
+                                <h4 class="card-title fw-bold mb-3">Habitación Juvenil</h4>
+                                <p class="card-text text-light-gray mb-4">Diseño moderno y espacioso, ideal para jóvenes y parejas.</p>
+                                
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <span class="amenity-badge"><i class="bi bi-wifi text-warning"></i> WiFi</span>
+                                    <span class="amenity-badge"><i class="bi bi-tv text-warning"></i> Smart TV</span>
+                                    <span class="amenity-badge"><i class="bi bi-car-front text-warning"></i> Cochera</span>
+                                </div>
+                                
+                                <button type="button" class="btn btn-outline-warning w-100 mt-auto" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#modalReserva"
+                                    data-room-title="Habitación Juvenil"
+                                    data-room-desc="Esta habitación cuenta con cama Queen, baño privado con agua caliente las 24 horas, Smart TV y aire acondicionado"
+                                    data-room-price="S/ 40.00 / noche">
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <!-- Componente Avanzado: Progress Bar (Ejemplo de disponibilidad) -->
+                <div class="mt-5">
+                    <h5 class="text-white text-center">Disponibilidad Actual</h5>
+                    <div class="progress" style="height: 25px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75% Ocupado</div>
+                    </div>
+                </div>
+            </div>
+
+        </section>    
+
+        <!-- Servicios: Tabla Informativa y Toast Trigger -->
+        <section id="servicios" class="container py-5">
+            <h2 class="text-center mb-4">Tarifas y Servicios Adicionales</h2>
+            <div class="table-responsive shadow-sm rounded">
+                <table class="table table-hover table-bordered align-middle text-center mb-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Habitación</th>
+                            <th>Capacidad</th>
+                            <th>Servicios</th>
+                            <th>Precio por noche</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Suite Ejecutiva</td>
+                            <td>2 adultos</td>
+                            <td>WiFi, AC, Smart TV, Minibar, Cochera</td>
+                            <td>S/ 150</td>
+                        </tr>
+                        <tr>
+                            <td>Suite Nupcial</td>
+                            <td>2 adultos</td>
+                            <td>WiFi, Smart TV, Minibar, Jacuzzi, Cochera</td>
+                            <td>S/ 120</td>
+                        </tr>
+                        <tr>
+                            <td>Habitación Matrimonial</td>
+                            <td>2 adultos</td>
+                            <td>WiFi, Smart TV, Minibar, Cochera</td>
+                            <td>S/ 70</td>
+                        </tr>
+                        <tr>
+                            <td>Habitación Doble Confort</td>
+                            <td>2 adultos , 2 niños</td>
+                            <td>WiFi, Smart TV, Cochera</td>
+                            <td>S/ 60</td>
+                        </tr>
+                        <tr>
+                            <td>Habitación Familiar</td>
+                            <td>6 personas</td>
+                            <td>WiFi,Smart TV, Cochera</td>
+                            <td>S/ 90</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Sección: Nuestros Servicios -->
+        <section id="nuestros-servicios" class="mi-fondo-degradado py-5">
+            <div class="container py-4">
+                <div class="text-center mb-5">
+                    <h2 class="text-gold fw-bold text-uppercase tracking-wide">Nuestros Servicios</h2>
+                    <hr class="divider-yellow mx-auto">
+                </div>
+                
+                <!-- Uso de Bootstrap Grid: 2 columnas en pantallas medianas/grandes -->
+                <div class="row g-4 justify-content-center">
+                    
+                    <!-- Card 1: Salon Privado -->
+                    <div class="col-md-6 d-flex">
+                        <div class="card h-100 card-dark shadow card-hover w-100 border-0">
+                            <div class="p-3 pb-0">
+                                <img src="img/salonp.png" class="card-img-top rounded-4 img-service" alt="Salon Privado">
+                            </div>
+                            <div class="card-body d-flex flex-column text-white p-4">
+                                <h4 class="card-title fw-bold mb-3">Salon Privado</h4>
+                                <p class="card-text text-light-gray mb-4">Disfruta de un espacio exclusivo para eventos y reuniones, con atención personalizada y servicios de catering.</p>
+                                
+                                <!-- Etiquetas (Badges) -->
+                                <div class="d-flex flex-wrap gap-2 mt-auto">
+                                    <span class="amenity-badge"><i class="bi bi-cup-hot text-warning"></i> Sala de Eventos</span>
+                                    <span class="amenity-badge"><i class="bi bi-clock text-warning"></i> 24/7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Cochera -->
+                    <div class="col-md-6 d-flex">
+                        <div class="card h-100 card-dark shadow card-hover w-100 border-0">
+
+                            <div class="p-3 pb-0">
+                                <img src="img/estacionamiento.png" class="card-img-top rounded-4 img-service" alt="Cochera">
+                            </div>
+                            <div class="card-body d-flex flex-column text-white p-4">
+                                <h4 class="card-title fw-bold mb-3">Cochera</h4>
+                                <p class="card-text text-light-gray mb-4">Disfruta de nuestra cochera con servicio de estacionamiento seguro y conveniente.</p>
+                                
+                                <!-- Etiquetas (Badges) -->
+                                <div class="d-flex flex-wrap gap-2 mt-auto">
+                                    <span class="amenity-badge"><i class="bi bi-car-front text-warning"></i> Cochera</span>
+                                    <span class="amenity-badge"><i class="bi bi-key text-warning"></i> Acceso 24/7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto: Formulario con validación y Google Maps -->
+        <section id="contacto" class="bg-light py-5">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-6">
+                        <h2 class="mb-4">Contáctanos</h2>
+                        <!-- Alert Component -->
+                        <div class="alert alert-info" role="alert">
+                            <i class="bi bi-info-circle me-2"></i> Responderemos a tu consulta en menos de 24 horas.
+                        </div>
+                        
+                        <!-- Formulario HTML5 con Bootstrap validation -->
+                        <form id="contactForm" class="needs-validation" novalidate>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre Completo</label>
+                                <input type="text" class="form-control" id="nombre" required>
+                                <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="correo" class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="correo" required>
+                                <div class="invalid-feedback">Ingresa un correo electrónico válido.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label">Teléfono (Opcional)</label>
+                                <input type="tel" class="form-control" id="telefono">
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensaje" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                                <div class="invalid-feedback">No olvides escribir tu mensaje.</div>
+                            </div>
+                            <button type="submit" class="btn btn-gold fw-bold d-flex align-items-center">
+                                <!-- Componente Avanzado: Spinner (oculto por defecto) -->
+                                <span class="spinner-border spinner-border-sm d-none me-2" id="formSpinner" role="status" aria-hidden="true"></span>
+                                Enviar Mensaje
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <h2 class="mb-4">Nuestra Ubicación</h2>
+                        <!-- Mapa incrustado -->
+                        <div class="ratio ratio-4x3 shadow rounded overflow-hidden">
+                            <iframe src="https://maps.google.com/maps?q=Calle%20José%20Faustino%20Sánchez%20Carrión%20MZ-B%2C%20Sayán%2015237%2C%20Sayán%2C%20Peru&t=&z=15&ie=UTF8&iwloc=&output=embed" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Información de Contacto -->
+        <section class="bg-white py-5">
+            <div class="container d-flex justify-content-center">
+                
+                <!-- Tarjeta de Contacto (Se cambió shadow-sm por shadow-lg para una sombra grande) -->
+                <div class="card card-darkbg- shadow-lg border-0 p-4 p-md-5 rounded-4 w-100" style="max-width: 800px;">
+                    <h4 class="text-gold fw-bold fst-italic mb-4 pb-2">Información de Contacto</h4>
+                    
+                    <div class="d-flex flex-column gap-4">
+                        <!-- Teléfono -->
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-telephone-fill text-warning fs-5 me-3"></i>
+                            <span class="text-dark fst-italic fs-6">Teléfono: +51 904 640 054</span>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-envelope-fill text-warning fs-5 me-3"></i>
+                            <span class="text-dark fst-italic fs-6">Email: gloryshotelp@gmail.com</span>
+                        </div>
+                        
+                        <!-- Dirección -->
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-geo-alt-fill text-warning fs-5 me-3"></i>
+                            <span class="text-dark fst-italic fs-6">Dirección: Calle José Faustino Sánchez Carrión MZ-B LT-35, Sayán 15237, Perú</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <div class="container">
+            <p class="mb-0">&copy; D&M 2026 Glory's Hotel   <br>  Todos los derechos reservados.</p>
+            <div class="mt-2">
+                <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+                <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+                <a href="#" class="text-white"><i class="bi bi-whatsapp fs-4"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Modal (Dinámico) -->
+    <div class="modal fade" id="modalReserva" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content card-dark border-warning">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-warning fw-bold" id="modalLabel">Detalles de la Habitación</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-white">
+                    <p id="modalRoomDesc">.</p>
+                    <p class="fw-bold text-warning fs-4" id="modalRoomPrice"></p>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <!-- Este botón podrá conectarse a tu futuro sistema de reservas -->
+                    <a href="contacto.html" class="btn btn-warning fw-bold">Reservar Fecha</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Componente Avanzado: Toast (Notificación de formulario) -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="successToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    ¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (Requerido por la rúbrica) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap 5 JS Bundle (incluye Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/app.js"></script>
+</body>
+</html>
